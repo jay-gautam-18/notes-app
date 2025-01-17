@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-blue-200 to-indigo-200 min-h-screen p-10 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-blue-600 to-indigo-600 p-5 shadow-lg rounded-xl max-w-5xl mx-auto mb-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-white text-3xl font-extrabold tracking-wide transform hover:scale-105 transition-transform duration-500">
+        Note Details
+      </a>
+      <ul class="flex space-x-8 text-white font-semibold">
+        <li>
+          <a href="/" class="hover:text-indigo-300 transition-colors duration-500">Home</a>
+        </li>
+        <li>
+          <a href="/notes" class="hover:text-indigo-300 transition-colors duration-500">Submit a Note</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Note Details Section -->
+  <section class="container mx-auto p-6 fade-in">
+    <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-3xl mx-auto">
+      <!-- Title -->
+      <h2 class="text-4xl font-bold mb-6 text-indigo-700">
+        Note Title: <span class="text-blue-600"><%= filename %></span>
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Last Modified: <span class="font-semibold text-gray-800"><%= new Date().toLocaleDateString() %></span>
+      </p>
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Content</h3>
+        <p class="text-gray-700 leading-relaxed text-lg bg-indigo-50 p-5 rounded-lg shadow-inner">
+          <%= content %>
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex space-x-4">
+        <a href="/edit/<%= filename %>" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-500 transition-colors duration-500 transform hover:scale-105">
+          Edit
+        </a>
+        <a href="/delete/<%= filename %>" class="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-500 transition-colors duration-500 transform hover:scale-105">
+          Delete
+        </a>
+        <a href="/" class="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-500 transition-colors duration-500 transform hover:scale-105">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
