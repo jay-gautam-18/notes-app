@@ -15,9 +15,9 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 min-h-screen p-10 text-gray-800 font-sans">
+<body class="bg-gradient-to-r from-orange-300 via-yellow-200 to-white min-h-screen p-10 text-gray-800 font-sans">
   <!-- Navbar -->
-  <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-6 shadow-xl rounded-3xl mb-12">
+  <nav class="bg-gradient-to-r from-red-600 via-orange-600 to-yellow-500 p-6 shadow-xl rounded-3xl mb-12">
     <div class="container mx-auto flex justify-between items-center">
       <a href="/" class="text-white text-4xl font-extrabold tracking-wider">
         My Notes
@@ -39,7 +39,7 @@
 
   <!-- Notes Section -->
   <section class="container mx-auto">
-    <h2 class="text-4xl font-bold text-indigo-700 mb-8 text-center">Your Personal Notes</h2>
+    <h2 class="text-4xl font-bold text-black mb-8 text-center">Your Personal Notes</h2>
     <p class="text-gray-600 text-center mb-10 max-w-lg mx-auto">
       Keep your thoughts and ideas organized. View, edit, or delete any note below with a simple click.
     </p>
@@ -47,19 +47,19 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <!-- Static Note Card Example -->
     <% files.forEach(file =>{ %>
-      <div class="bg-white p-6 rounded-3xl shadow-lg border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow duration-300 slide-in transform hover:-translate-y-1 hover:scale-105">
+      <div class="bg-white p-6 rounded-3xl shadow-lg border-t-4 border-yellow-500 hover:shadow-2xl transition-shadow duration-300 slide-in transform hover:-translate-y-1 hover:scale-105">
         <div class="flex items-center justify-between mb-4">
-          <h3 class="text-2xl font-semibold text-indigo-600"><%= file.name.split('.')[0] %></h3>
-          <span class="text-xs text-gray-400"><%= new Date().toLocaleDateString() %></span>
+          <h3 class="text-2xl font-semibold text-black"><%= file.name.split('.')[0] %></h3>
+          <span class="text-xs text-gray-700"><%= new Date().toLocaleDateString() %></span>
         </div>
         <div class="flex space-x-3 mt-6">
-            <a href="/show/<%= file.name %>" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-400 transition-colors duration-300 flex-1 text-center flex items-center justify-center space-x-2">
+            <a href="/show/<%= file.name %>" class="bg-orange-400 text-white px-4 py-2 rounded-md hover:bg-indigo-400 transition-colors duration-300 flex-1 text-center flex items-center justify-center space-x-2">
                 <span>View</span>
               </a>
           <a href="/delete/<%= file.name %>" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-400 transition-colors duration-300 flex-1 text-center flex items-center justify-center space-x-2">
             <span>Delete</span>
           </a>
-          <a href="/edit/<%= file.name %>" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-400 transition-colors duration-300 flex-1 text-center flex items-center justify-center space-x-2">
+          <a href="/edit/<%= file.name %>" class="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-blue-400 transition-colors duration-300 flex-1 text-center flex items-center justify-center space-x-2">
             <span>Edit</span>
           </a>
         </div>

@@ -19,10 +19,10 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 min-h-screen flex flex-col items-center justify-center p-6 text-gray-800">
+<body class="bg-gradient-to-r from-orange-300 via-yellow-200 to-white  min-h-screen flex flex-col items-center justify-center p-6 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-5 shadow-lg rounded-full w-full max-w-4xl mx-auto mb-8">
+  <nav class="bg-gradient-to-r from-red-600 via-orange-600 to-yellow-500 p-5 shadow-lg rounded-full w-full max-w-4xl mx-auto mb-8">
     <div class="container mx-auto flex justify-between items-center">
       <a href="#" class="text-white text-3xl font-extrabold tracking-wide transform hover:scale-105 transition-transform duration-300 ease-in-out">
         Update Note
@@ -44,7 +44,7 @@
 
   <!-- Update Note Form Section -->
   <section class="bg-white p-8 rounded-3xl shadow-2xl max-w-2xl mx-auto slide-up">
-    <h2 class="text-4xl font-bold text-indigo-700 text-center mb-8">Update Your Note</h2>
+    <h2 class="text-4xl font-bold text-orange-500 text-center mb-8">Update Your Note</h2>
 
     <!-- Form Start -->
     <form action="/update/<%= filename %>" method="post" class="space-y-8">
@@ -52,27 +52,27 @@
       <div>
         <label for="title" class="block text-gray-700 font-semibold mb-2">Note Title</label>
         <textarea id="content" name="filename" rows="2" required readonly
-        class="w-full px-5 py-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 bg-gray-50 text-gray-700 font-medium shadow-sm resize-none placeholder-gray-400"><%= filename %></textarea>
+        class="w-full px-5 py-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-300 bg-gray-50 text-gray-700 font-medium shadow-sm resize-none placeholder-gray-400"><%= filename %></textarea>
       </div>
 
       <!-- Date Input -->
       <div>
         <label for="date" class="block text-gray-700 font-semibold mb-2">Last Modified Date</label>
         <input type="text" id="date" name="date" value="<%= new Date().toLocaleDateString() %>" 
-          class="w-full px-5 py-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 bg-gray-100 text-indigo-700 font-medium">
+          class="w-full px-5 py-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-300 bg-gray-100 text-orange-700 font-medium">
       </div>
 
       <!-- Content Input -->
       <div>
         <label for="content" class="block text-gray-700 font-semibold mb-2">Note Content</label>
         <textarea id="content" name="filedata" rows="2" required
-          class="w-full px-5 py-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 bg-gray-50 text-gray-700 font-medium shadow-sm resize-none placeholder-gray-400"><%= content %></textarea>
+          class="w-full px-5 py-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-300 bg-gray-50 text-gray-700 font-medium shadow-sm resize-none placeholder-gray-400"><%= content %></textarea>
       </div>
 
       <!-- Buttons -->
       <div class="flex space-x-4">
         <button type="submit"
-          class="flex-1 bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold shadow-md transform transition-transform duration-300 hover:scale-105 hover:bg-indigo-500">
+          class="flex-1 bg-orange-600 text-white px-5 py-3 rounded-lg font-semibold shadow-md transform transition-transform duration-300 hover:scale-105 hover:bg-yellow-500">
           Update Note
         </button>
         <a href="/" class="flex-1 bg-gray-600 text-white px-5 py-3 rounded-lg font-semibold shadow-md transform transition-transform duration-300 hover:scale-105 hover:bg-gray-500 text-center">

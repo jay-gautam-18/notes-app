@@ -16,10 +16,10 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-blue-200 to-indigo-200 min-h-screen p-10 text-gray-800">
+<body class="bg-gradient-to-br from-orange-400 via-yellow-200 to-white min-h-screen p-10 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-gradient-to-r from-blue-600 to-indigo-600 p-5 shadow-lg rounded-xl max-w-5xl mx-auto mb-10">
+  <nav class="bg-gradient-to-r from-red-600 via-orange-600 to-yellow-500 p-5 shadow-lg rounded-xl max-w-5xl mx-auto mb-10">
     <div class="container mx-auto flex justify-between items-center">
       <a href="#" class="text-white text-3xl font-extrabold tracking-wide transform hover:scale-105 transition-transform duration-500">
         Note Details
@@ -39,14 +39,14 @@
   <section class="container mx-auto p-6 fade-in">
     <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-3xl mx-auto">
       <!-- Title -->
-      <h2 class="text-4xl font-bold mb-6 text-indigo-700">
+      <h2 class="text-4xl font-bold mb-6 text-orange-500">
         Note Title: <span class="text-blue-600"><%= filename %></span>
       </h2>
       <p class="text-lg text-gray-600 mb-8">
         Last Modified: <span class="font-semibold text-gray-800"><%= new Date().toLocaleDateString() %></span>
       </p>
       <div class="mb-8">
-        <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Content</h3>
+        <h3 class="text-2xl font-semibold mb-4 text-yellow-700">Content</h3>
         <p class="text-gray-700 leading-relaxed text-lg bg-indigo-50 p-5 rounded-lg shadow-inner">
           <%= content %>
         </p>
@@ -54,7 +54,7 @@
 
       <!-- Action Buttons -->
       <div class="flex space-x-4">
-        <a href="/edit/<%= filename %>" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-500 transition-colors duration-500 transform hover:scale-105">
+        <a href="/edit/<%= filename %>" class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-500 transition-colors duration-500 transform hover:scale-105">
           Edit
         </a>
         <a href="/delete/<%= filename %>" class="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-500 transition-colors duration-500 transform hover:scale-105">
